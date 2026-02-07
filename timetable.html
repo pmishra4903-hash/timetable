@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📘 Study Manager</h1>
+  <p>Plan smart. Study better.</p>
+</header>
+
+<main class="container">
+
+  <!-- Dashboard -->
+  <section class="card">
+    <h2>📊 Dashboard</h2>
+    <p>Total Tasks: <span id="totalTasks">0</span></p>
+    <p>Completed: <span id="completedTasks">0</span></p>
+  </section>
+
+  <!-- Timetable -->
+  <section class="card">
+    <h2>🗓 Study Timetable</h2>
+    <textarea id="timetable" placeholder="Write your daily / weekly timetable here..."></textarea>
+    <button onclick="saveTimetable()">Save Timetable</button>
+  </section>
+
+  <!-- To Do List -->
+  <section class="card">
+    <h2>✅ To-Do List</h2>
+    <div class="todo-input">
+      <input type="text" id="taskInput" placeholder="Add a new task">
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </section>
+
+  <!-- Pomodoro Timer -->
+  <section class="card">
+    <h2>⏱ Focus Timer (Pomodoro)</h2>
+    <div class="timer">
+      <span id="minutes">25</span>:<span id="seconds">00</span>
+    </div>
+    <div class="timer-buttons">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </section>
+
+  <!-- Notes -->
+  <section class="card">
+    <h2>📝 Notes & Reminders</h2>
+    <textarea id="notes" placeholder="Write important notes or reminders..."></textarea>
+    <button onclick="saveNotes()">Save Notes</button>
+  </section>
+
+</main>
+
+<footer>
+  <p>Made for students • Stay consistent 💪</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
